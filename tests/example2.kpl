@@ -1,0 +1,17 @@
+Program Example2; (* Factorial *)
+   
+Var n : float;
+    I : Integer;
+
+Function F(var n : Integer) : Integer;
+  Begin
+    F := n * F (n - 1)
+  End;
+
+Begin
+  For n := 1.5 To 7.5 Do
+    Begin
+      Call WRITELN;
+      Call WRITEI( F(n));
+    End;
+End. (* Factorial *)

@@ -1,0 +1,12 @@
+Program Example1; (* Example 1 *)
+CONST M = 3.14;
+TYPE t = FLOAT;
+VAR a:FLOAT;
+    b:INTEGER;
+    m:INTEGER;
+    c:FLOAT;
+    d:FLOAT;
+Begin
+m := b % 2;
+CALL WRITELN;
+End. (* Example 1 *)
