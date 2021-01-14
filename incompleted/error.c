@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include "error.h"
 
-#define NUM_OF_ERRORS 33
+#define NUM_OF_ERRORS 34
 
 struct ErrorMessage
 {
@@ -16,7 +16,7 @@ struct ErrorMessage
   char *message;
 };
 
-struct ErrorMessage errors[33] = {
+struct ErrorMessage errors[34] = {
     {ERR_MOD_INT, "Modulus operator requires integer value."},
     {ERR_FUNCTION_RETURN, "Missing return function"},
     {ERR_END_OF_COMMENT, "End of comment expected."},
@@ -49,7 +49,8 @@ struct ErrorMessage errors[33] = {
     {ERR_UNDECLARED_PROCEDURE, "Undeclared procedure."},
     {ERR_DUPLICATE_IDENT, "Duplicate identifier."},
     {ERR_TYPE_INCONSISTENCY, "Type inconsistency"},
-    {ERR_PARAMETERS_ARGUMENTS_INCONSISTENCY, "The number of arguments and the number of parameters are inconsistent."}};
+    {ERR_PARAMETERS_ARGUMENTS_INCONSISTENCY, "The number of arguments and the number of parameters are inconsistent."},
+    {ERR_TYPE_INDEX_FORLOOP, "Index forloop require integer"}};
 
 void error(ErrorCode err, int lineNo, int colNo)
 {

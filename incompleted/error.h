@@ -8,7 +8,8 @@
 #define __ERROR_H__
 #include "token.h"
 
-typedef enum {
+typedef enum
+{
   ERR_MOD_INT,
   ERR_FUNCTION_RETURN,
   ERR_END_OF_COMMENT,
@@ -41,7 +42,8 @@ typedef enum {
   ERR_UNDECLARED_PROCEDURE,
   ERR_DUPLICATE_IDENT,
   ERR_TYPE_INCONSISTENCY,
-  ERR_PARAMETERS_ARGUMENTS_INCONSISTENCY
+  ERR_PARAMETERS_ARGUMENTS_INCONSISTENCY,
+  ERR_TYPE_INDEX_FORLOOP
 } ErrorCode;
 
 void error(ErrorCode err, int lineNo, int colNo);

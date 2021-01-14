@@ -792,15 +792,15 @@ void compileForSt(void)
 
   // check if the identifier is a variable
   Object *var = checkDeclaredVariable(currentToken->string);
-  checkBasicType(var->varAttrs->type);
+  checkIndexForLoop(var->varAttrs->type);
 
   eat(SB_ASSIGN);
   Type *exp1Type = compileExpression();
-  checkBasicType(exp1Type);
+  checkIndexForLoop(exp1Type);
 
   eat(KW_TO);
   Type *exp2Type = compileExpression();
-  checkBasicType(exp2Type);
+  checkIndexForLoop(exp2Type);
 
   checkTypeEquality(var->varAttrs->type, exp1Type);
   checkTypeEquality(exp1Type, exp2Type);
